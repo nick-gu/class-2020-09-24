@@ -70,6 +70,11 @@ largedrop <- sep_diff %>%
 largeinc <- sep_diff %>% 
   arrange(desc(differenceen)) %>%
   slice(1:5)
+
+course_10 <- rbind(largedrop, largeinc) %>%
+  select(-(title.old:department.old))
+
+course_10 %>% gt()
 ```
 
 
